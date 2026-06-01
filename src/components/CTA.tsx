@@ -12,10 +12,10 @@ export function CTA({ onNavigateToBooking }: CTAProps) {
         
         {/* Luxury Background Glow Effects */}
         <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[rgba(30,50,90,0.03)] blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[#C5A880]/10 blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[#6233f3]/10 blur-3xl pointer-events-none" />
 
         {/* Small Tag */}
-        <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-4 block relative z-10">
+        <span className="text-xs uppercase tracking-[0.25em] text-[#6233f3] font-semibold mb-4 block relative z-10">
           Contacto Directo
         </span>
 
@@ -43,10 +43,10 @@ export function CTA({ onNavigateToBooking }: CTAProps) {
         </motion.button>
 
         {/* Decorative corner highlights */}
-        <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#C5A880]/30" />
-        <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#C5A880]/30" />
-        <div className="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-[#C5A880]/30" />
-        <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-[#C5A880]/30" />
+        <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#6233f3]/30" />
+        <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#6233f3]/30" />
+        <div className="absolute bottom-6 left-6 w-3 h-3 border-b border-l border-[#6233f3]/30" />
+        <div className="absolute bottom-6 right-6 w-3 h-3 border-b border-r border-[#6233f3]/30" />
 
       </div>
     </section>

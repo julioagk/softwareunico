@@ -22,7 +22,7 @@ function App() {
   }
 
   return (
-    <main className="min-h-screen bg-[#f0f0f0] text-[rgb(45,45,45)] selection:bg-[#C5A880]/20 selection:text-[rgba(30,50,90,1)] relative overflow-x-hidden">
+    <main className="min-h-screen bg-[#f0f0f0] text-[rgb(45,45,45)] selection:bg-[#6233f3]/20 selection:text-[rgba(30,50,90,1)] relative overflow-x-hidden">
       <AnimatePresence mode="wait">
         {view === 'home' ? (
           <motion.div

@@ -9,7 +9,7 @@ export function HeroBadge() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-md border border-white/20 mx-auto mb-3 w-fit shadow-sm"
     >
-      <Sparkles className="w-4 h-4 text-[#C5A880]" />
+      <Sparkles className="w-4 h-4 text-[#6233f3]" />
       <span className="text-[14px] font-normal text-[rgba(30,50,90,0.9)]">
         Software a Medida
       </span>

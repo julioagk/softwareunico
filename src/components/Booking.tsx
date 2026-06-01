@@ -85,7 +85,7 @@ export function Booking({ onBackToHome }: BookingProps) {
       
       {/* Background visual accents */}
       <div className="absolute top-20 left-10 w-96 h-96 rounded-full bg-[rgba(30,50,90,0.03)] blur-3xl pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-[#C5A880]/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-[#6233f3]/10 blur-3xl pointer-events-none" />
 
       {/* Top Controls Container */}
       <div className="w-full max-w-[500px] flex justify-start mb-4 md:mb-6 relative z-10">
@@ -108,14 +108,14 @@ export function Booking({ onBackToHome }: BookingProps) {
         className="w-full max-w-[500px] bg-white/45 backdrop-blur-xl border border-white rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-sm relative z-10 flex flex-col items-center"
       >
         {/* Subtle corner decorative indicators */}
-        <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#C5A880]/30" />
-        <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#C5A880]/30" />
+        <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#6233f3]/30" />
+        <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#6233f3]/30" />
 
         {submitStatus !== 'success' ? (
           <>
             {/* Header Content */}
             <div className="text-center w-full mb-6">
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-2 block">
+              <span className="text-[10px] uppercase tracking-[0.25em] text-[#6233f3] font-semibold mb-2 block">
                 Reservar
               </span>
               <h2 className="text-2xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight mb-2">
@@ -144,7 +144,7 @@ export function Booking({ onBackToHome }: BookingProps) {
               {/* Name Field */}
               <div className="flex flex-col gap-1.5 w-full">
                 <label htmlFor="name" className="text-xs font-semibold text-[rgba(30,50,90,0.8)] pl-1">
-                  Nombre completo <span className="text-[#C5A880]">*</span>
+                  Nombre completo <span className="text-[#6233f3]">*</span>
                 </label>
                 <input
                   type="text"
@@ -154,7 +154,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#6233f3] focus:ring-1 focus:ring-[#6233f3] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 
@@ -173,14 +173,14 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#6233f3] focus:ring-1 focus:ring-[#6233f3] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 
               {/* Phone / WhatsApp Field */}
               <div className="flex flex-col gap-1.5 w-full">
                 <label htmlFor="phone" className="text-xs font-semibold text-[rgba(30,50,90,0.8)] pl-1">
-                  Teléfono o WhatsApp <span className="text-[#C5A880]">*</span>
+                  Teléfono o WhatsApp <span className="text-[#6233f3]">*</span>
                 </label>
                 <input
                   type="tel"
@@ -190,7 +190,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#6233f3] focus:ring-1 focus:ring-[#6233f3] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 

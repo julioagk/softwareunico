@@ -101,7 +101,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
     <section id="soluciones" className="py-16 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto bg-[#f0f0f0]">
       {/* Header Container */}
       <div className="max-w-3xl mb-10">
-        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-2 block">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#6233f3] font-semibold mb-2 block">
           Áreas de Enfoque
         </span>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[rgba(30,50,90,0.95)] mb-4 tracking-tight leading-[1.15]">
@@ -124,7 +124,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedSolution(sol)}
-              className="bg-white/40 backdrop-blur-md border border-white/30 p-6 md:p-7 rounded-[1.5rem] flex flex-col justify-between hover:border-[#C5A880]/30 hover:bg-white/60 transition-all duration-300 shadow-sm relative group overflow-hidden cursor-pointer"
+              className="bg-white/40 backdrop-blur-md border border-white/30 p-6 md:p-7 rounded-[1.5rem] flex flex-col justify-between hover:border-[#6233f3]/30 hover:bg-white/60 transition-all duration-300 shadow-sm relative group overflow-hidden cursor-pointer"
             >
               {/* Glass subtle gradient element */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -132,10 +132,10 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               <div>
                 {/* Number & Icon */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="text-[#C5A880] font-semibold text-xs tracking-wider uppercase">
+                  <span className="text-[#6233f3] font-semibold text-xs tracking-wider uppercase">
                     {sol.id}
                   </span>
-                  <div className="p-2.5 rounded-xl bg-white/50 border border-white/40 text-[rgba(30,50,90,0.8)] group-hover:bg-[#C5A880]/10 group-hover:text-[#C5A880] transition-colors duration-300">
+                  <div className="p-2.5 rounded-xl bg-white/50 border border-white/40 text-[rgba(30,50,90,0.8)] group-hover:bg-[#6233f3]/10 group-hover:text-[#6233f3] transition-colors duration-300">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               </div>
 
               {/* Action decoration */}
-              <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#C5A880] transition-all duration-300">
+              <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#6233f3] transition-all duration-300">
                 <span className="font-semibold group-hover:underline">Saber más</span>
                 <span className="text-lg transition-transform group-hover:translate-x-1">→</span>
               </div>
@@ -183,8 +183,8 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               className="relative w-full max-w-[650px] bg-white/95 backdrop-blur-xl border border-white rounded-[2rem] p-6 sm:p-10 md:p-12 shadow-2xl flex flex-col text-left overflow-hidden z-10"
             >
               {/* Top Accent corner marks */}
-              <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#C5A880]/30" />
-              <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#C5A880]/30" />
+              <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#6233f3]/30" />
+              <div className="absolute top-6 right-6 w-3 h-3 border-t border-r border-[#6233f3]/30" />
 
               {/* Close Button */}
               <button
@@ -196,11 +196,11 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
 
               {/* Icon & Category */}
               <div className="flex items-center gap-3 mb-6 mt-2">
-                <div className="p-3 rounded-xl bg-[#C5A880]/10 text-[#C5A880] border border-[#C5A880]/20">
+                <div className="p-3 rounded-xl bg-[#6233f3]/10 text-[#6233f3] border border-[#6233f3]/20">
                   {selectedSolution && <selectedSolution.icon className="w-6 h-6" />}
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#C5A880] font-semibold block">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#6233f3] font-semibold block">
                     Solución {selectedSolution.id}
                   </span>
                   <h3 className="text-xl sm:text-2xl font-semibold text-[rgba(30,50,90,0.95)] tracking-tight">
@@ -210,7 +210,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               </div>
 
               {/* Subheading */}
-              <h4 className="text-sm font-medium text-[#C5A880] leading-relaxed mb-4 border-l-2 border-[#C5A880] pl-3 italic">
+              <h4 className="text-sm font-medium text-[#6233f3] leading-relaxed mb-4 border-l-2 border-[#6233f3] pl-3 italic">
                 "{selectedSolution.subtitle}"
               </h4>
 
@@ -226,7 +226,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
                 </span>
                 {selectedSolution.benefits.map((benefit, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-[#C5A880] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-4 h-4 text-[#6233f3] shrink-0 mt-0.5" />
                     <span className="text-xs sm:text-sm font-normal text-[rgba(30,50,90,0.85)] leading-tight">
                       {benefit}
                     </span>

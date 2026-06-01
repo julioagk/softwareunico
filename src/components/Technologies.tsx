@@ -20,7 +20,7 @@ export function Technologies() {
         
         {/* Left Side Copy */}
         <div className="lg:col-span-1 max-w-lg">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-2 block">
+          <span className="text-xs uppercase tracking-[0.2em] text-[#6233f3] font-semibold mb-2 block">
             Infraestructura
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[rgba(30,50,90,0.95)] mb-4 tracking-tight leading-[1.15]">
@@ -42,7 +42,7 @@ export function Technologies() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-white/40 backdrop-blur-md border border-white/30 p-5 sm:p-6 rounded-[1.5rem] flex flex-col items-center justify-center hover:bg-white/60 hover:border-[#C5A880]/30 transition-all duration-300 shadow-sm group cursor-default"
+                className="bg-white/40 backdrop-blur-md border border-white/30 p-5 sm:p-6 rounded-[1.5rem] flex flex-col items-center justify-center hover:bg-white/60 hover:border-[#6233f3]/30 transition-all duration-300 shadow-sm group cursor-default"
               >
                 {/* Tech Icon Container */}
                 <div className={`p-4 rounded-2xl bg-white/50 border border-white/40 shadow-sm transition-all duration-300 group-hover:scale-110 ${tech.color}`}>
@@ -55,7 +55,7 @@ export function Technologies() {
                 </span>
 
                 {/* Gold micro dot highlight */}
-                <div className="w-1.5 h-1.5 rounded-full bg-[#C5A880] mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#6233f3] mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
             )
           })}
