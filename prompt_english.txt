@@ -1,0 +1,108 @@
+Build a premium, high-fidelity landing page and interactive booking application for a bespoke software studio named "SOFTWARE ÚNICO". The application must showcase a modern, sleek glassmorphism aesthetic with a vibrant corporate purple (#6233f3) accent matching the brand identity.
+
+Ensure all copy, navigation links, modals, forms, and validation alerts are written in native, premium English.
+
+### General Design Guidelines
+- **Color Palette**: Deep corporate navy (#1E325A), slate gray (#5E6470), background off-white (#f0f0f0), and vibrant corporate purple (#6233f3).
+- **Typography**: Import and use "Plus Jakarta Sans" from Google Fonts for all branding signatures and elegant headers. For the branding label, use: `font-plus-jakarta uppercase tracking-[0.18em] font-light text-[#1E325A]` for "SOFTWARE" and `font-semibold text-[#6233f3]` for "ÚNICO".
+- **Viewport Layout**: Compact gaps, tight margins, and optimized column widths to deliver a natively spacious, comfortable 75%-80% scaled aesthetic on standard 100% zoom screens.
+
+---
+
+### Dependencies
+- Use `lucide-react` for high-quality SVG icons.
+- Use `motion` (imported from `'motion/react'`) for clean, smooth hardware-accelerated animations.
+
+---
+
+### File Structure & Setup
+
+#### 1. Global Styles (`src/index.css`)
+Import the Google Font and configure the Tailwind CSS theme variables:
+```css
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-plus-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-helvetica: "Helvetica Regular", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #f0f0f0;
+  font-family: var(--font-helvetica);
+}
+```
+
+#### 2. App Controller (`src/App.tsx`)
+Implement a client-side router managing transition states between two main views: `'home'` and `'booking'`. Use `<AnimatePresence mode="wait">` to animate navigation switches cleanly. Set global selection colors in the main container: `selection:bg-[#6233f3]/20 selection:text-[#1E325A]`.
+
+#### 3. Navbar Component (`src/components/Navbar.tsx`)
+A spacious, balanced header that scales gracefully:
+- **Left Branding**: `flex-initial shrink-0`. Display a rounded square logo image (`/logosoftwareunido.jpeg`, `w-10 h-10 md:w-11 md:h-11`) next to the styled typography brand name "SOFTWARE ÚNICO".
+- **Center Menu**: `hidden md:flex gap-5 lg:gap-8`. Include links: `Solutions`, `Services`, `Process`, `Technologies`, `Contact`.
+  - **Premium Hover Chevron Animation**: Do not display chevron arrows permanently. Instead, wrap the chevron icon (`ChevronRight`, `w-3.5 h-3.5 text-[#6233f3]`) in a container that is completely hidden when idle (`w-0 opacity-0`) and smoothly slides/fades in ONLY on list hover (`group-hover:w-3.5 group-hover:opacity-100 transition-all duration-300 ml-0.5`).
+- **Right Button**: `flex-initial shrink-0 flex justify-end`. Renders the rounded button "Schedule a Consultation" leading to the booking page, featuring an `ArrowUpRight` icon.
+
+#### 4. Hero Section (`src/components/Hero.tsx`)
+- **Video Background**: Full screen `<video autoplay muted loop playsinline className="absolute inset-0 w-full h-full object-cover z-0">` with source `https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085640_276ea93b-d7da-4418-a09b-2aa5b490e838.mp4`.
+- **Top Badge**: A pill badge saying "Bespoke Software" with a purple `Sparkles` icon.
+- **Header**: Large heading saying `"Software engineered for the way your business scales."`
+- **Sub-headline**: `"We design and build high-performance platforms, integrations, and intelligent systems tailored to your unique operation."`
+- **Bottom Left Card**: Floating glass container with the action button `"Request Consultation"`.
+- **Bottom Right Corner**: A curved, faux-cutout corner mask displaying `"Scalable Architecture"` and subtitle `"Designed to grow alongside your operations."`.
+
+#### 5. Solutions Grid (`src/components/Solutions.tsx`)
+Render a 3x2 interactive glass grid of custom service offerings.
+- **Categories**:
+  1. *AI & Automation*: "Intelligent agents, predictive analysis, and LLM integrations to automate complex operational workflows."
+  2. *Web Platforms*: "High-capacity corporate portals, SaaS systems, and cloud portals designed for heavy workloads."
+  3. *Mobile Apps*: "Premium native and cross-platform apps for iOS and Android, focusing on intuitive user experiences."
+  4. *Cloud Infrastructure*: "Highly secure, scalable architecture optimized on AWS and Google Cloud for maximum stability."
+  5. *API Integrations*: "Seamless connections between your legacy databases, CRM, ERP, and external services."
+  6. *Cybersecurity*: "Advanced security compliance, identity verification, encryption, and structural audits."
+- **Interactive Details Modal**: Clicking any card displays a high-fidelity details modal pop-up containing:
+  - Custom subtitle, expanded technical description, and a list of 3 `"Operational Advantages"` mapped with purple checkmark icons.
+  - A primary button `"Consult with an Expert"` that closes the modal and immediately routes the user to the Booking page.
+
+#### 6. Development Process (`src/components/Process.tsx`)
+A minimal 4-stage pipeline showcasing the engineering roadmap:
+- **Stages**:
+  1. *Discovery*: "Deep dive into your operations, workflows, and business objectives."
+  2. *Architecture*: "Designing the structural blueprint, database schemas, and data pipelines."
+  3. *Development*: "Agile coding sprints, high-quality standards, and automated unit testing."
+  4. *Deployment*: "Continuous integration, cloud configuration, and secure staging launch."
+- Styled as a sleek horizontal line layout on desktop, turning into a structured vertical pipeline on mobile, highlighted with corporate purple dots.
+
+#### 7. Technologies Stack (`src/components/Technologies.tsx`)
+A 2-column layout. The left column details your stack focus, and the right renders an 8-chip minimal grid displaying technologies: Next.js, React, Node.js, PostgreSQL, Supabase, AWS, OpenAI, and Docker. Each card is finished with an interactive brand-purple dot that pops on hover.
+
+#### 8. Bottom CTA Banner (`src/components/CTA.tsx`)
+A wide, curved glass banner.
+- **Headline**: `"Does your business need software that actually fits?"`
+- **Subtext**: `"Stop struggling with generic platforms. Schedule a session today and talk directly with our systems architects."`
+- **Button**: `"Schedule a Consultation"` leading to the Booking page.
+
+#### 9. Booking Page (`src/components/Booking.tsx`)
+A full-screen, focused form container styled like a floating glass panel on a clean gray canvas.
+- **Branding Header**: A simplified "Book a Consultation" section with the subtitle `"Enter your details and our engineering team will get in touch today to design your custom software solution."`
+- **Fields**:
+  - `Full name *` (Required)
+  - `Company / Organization` (Optional)
+  - `Phone or WhatsApp *` (Required)
+- **Submit Action**: Connects to the EmailJS REST API (`https://api.emailjs.com/api/v1.0/email/send`) with fully simulated loading, error, and success states:
+  - On submit, show a spinner and `"Processing..."` copy.
+  - On success, render a beautiful green success checkmark card saying: `"Request Received!"` and `"Thank you, [Name]. We have received your contact details. A software engineer from our team will reach out shortly."`
+- **WhatsApp Fallback**: A direct contact button styled in native WhatsApp green below the form saying: `"Chat on WhatsApp"` (pre-filled text: `"Hi SOFTWARE ÚNICO, I'd like to schedule a meeting to talk about a custom software project."`).
+
+#### 10. Footer Component (`src/components/Footer.tsx`)
+Conclude the page with a clean layout containing:
+- The corporate logo next to the styled **SOFTWARE ÚNICO** branding.
+- Quick navigation links (`Solutions`, `Services`, `Process`, `Technologies`, `Privacy Policy`).
+- A clean copyright line: `© [CurrentYear] SOFTWAREUNICO. All rights reserved.` (No extra descriptive text blocks).
