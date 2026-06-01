@@ -9,9 +9,9 @@ export function Navbar({ onNavigateToBooking }: NavbarProps) {
   const menuItems = [
     { label: 'Soluciones', target: 'soluciones', hasDropdown: true },
     { label: 'Servicios', target: 'soluciones', hasDropdown: true },
-    { label: 'Proceso', target: 'proceso', hasDropdown: false },
-    { label: 'Tecnologías', target: 'tecnologias', hasDropdown: false },
-    { label: 'Contacto', target: 'contacto', hasDropdown: false },
+    { label: 'Proceso', target: 'proceso', hasDropdown: true },
+    { label: 'Tecnologías', target: 'tecnologias', hasDropdown: true },
+    { label: 'Contacto', target: 'contacto', hasDropdown: true },
   ]
 
   const scrollToSection = (id: string) => {
