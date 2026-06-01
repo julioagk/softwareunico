@@ -34,7 +34,7 @@ export function Booking({ onBackToHome }: BookingProps) {
         from_name: name,
         company_name: company || 'No especificada',
         contact_phone: phone,
-        message: `Solicitud de agendamiento para SOFTWAREUNICO de ${name} (${company || 'Persona Física'}). Teléfono/WhatsApp: ${phone}`,
+        message: `Solicitud de consultoría para SOFTWAREUNICO de ${name} (${company || 'Persona Física'}). Teléfono/WhatsApp: ${phone}`,
       },
     }
 
@@ -116,7 +116,7 @@ export function Booking({ onBackToHome }: BookingProps) {
             {/* Header Content */}
             <div className="text-center w-full mb-6">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-2 block">
-                Agendamiento
+                Reservar
               </span>
               <h2 className="text-2xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight mb-2">
                 Agendar una Reunión
@@ -210,7 +210,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Confirmar Agendamiento</span>
+                    <span>Agendar Consultoría</span>
                   </>
                 )}
               </motion.button>
