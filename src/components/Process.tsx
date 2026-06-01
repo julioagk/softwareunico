@@ -30,16 +30,16 @@ export function Process() {
   ]
 
   return (
-    <section id="proceso" className="py-24 px-6 md:px-12 lg:px-20 max-w-[1536px] mx-auto bg-[#f0f0f0]">
+    <section id="proceso" className="py-16 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto bg-[#f0f0f0]">
       {/* Header Container */}
-      <div className="max-w-3xl mb-20 text-left">
-        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-3 block">
+      <div className="max-w-3xl mb-12 text-left">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-2 block">
           Metodología
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight">
           Nuestro proceso
         </h2>
-        <div className="w-16 h-0.5 bg-[#C5A880] mt-4" />
+        <div className="w-16 h-0.5 bg-[#C5A880] mt-3" />
       </div>
 
       {/* Horizontal Line on Desktop, Vertical on Mobile */}
@@ -48,7 +48,7 @@ export function Process() {
         <div className="absolute top-1/2 left-[10%] right-[10%] h-[1px] bg-gradient-to-r from-transparent via-[rgba(30,50,90,0.15)] to-transparent -translate-y-1/2 z-0 hidden lg:block" />
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 relative z-10">
           {steps.map((st, index) => {
             const Icon = st.icon
             return (
@@ -58,7 +58,7 @@ export function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="bg-white/40 backdrop-blur-md border border-white/30 p-8 rounded-[2rem] flex flex-col justify-between hover:border-[#C5A880]/30 hover:bg-white/60 transition-all duration-300 shadow-sm group"
+                className="bg-white/40 backdrop-blur-md border border-white/30 p-6 rounded-[1.5rem] flex flex-col justify-between hover:border-[#C5A880]/30 hover:bg-white/60 transition-all duration-300 shadow-sm group"
               >
                 <div>
                   {/* Step Badge & Icon */}

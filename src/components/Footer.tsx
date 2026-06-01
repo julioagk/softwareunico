@@ -2,7 +2,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full bg-[#f0f0f0] border-t border-white/40 py-12 px-6 md:px-12 lg:px-20 max-w-[1536px] mx-auto">
+    <footer className="w-full bg-[#f0f0f0] border-t border-white/40 py-8 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto">
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Brand Label */}

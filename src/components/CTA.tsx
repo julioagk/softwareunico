@@ -7,25 +7,25 @@ interface CTAProps {
 
 export function CTA({ onNavigateToBooking }: CTAProps) {
   return (
-    <section id="contacto" className="py-24 px-6 md:px-12 lg:px-20 max-w-[1536px] mx-auto bg-[#f0f0f0]">
-      <div className="relative bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-xl border border-white/30 rounded-[2.5rem] p-8 sm:p-12 md:p-20 text-center flex flex-col items-center justify-center overflow-hidden shadow-sm group">
+    <section id="contacto" className="py-16 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto bg-[#f0f0f0]">
+      <div className="relative bg-gradient-to-br from-white/40 to-white/20 backdrop-blur-xl border border-white/30 rounded-[2rem] p-6 sm:p-10 md:p-14 text-center flex flex-col items-center justify-center overflow-hidden shadow-sm group">
         
         {/* Luxury Background Glow Effects */}
         <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[rgba(30,50,90,0.03)] blur-3xl pointer-events-none" />
         <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[#C5A880]/10 blur-3xl pointer-events-none" />
 
         {/* Small Tag */}
-        <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-6 block relative z-10">
+        <span className="text-xs uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-4 block relative z-10">
           Contacto Directo
         </span>
 
         {/* Title */}
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[rgba(30,50,90,0.95)] max-w-4xl tracking-tight leading-[1.15] mb-6 relative z-10">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[rgba(30,50,90,0.95)] max-w-4xl tracking-tight leading-[1.15] mb-4 relative z-10">
           ¿Tu empresa necesita software que realmente se adapte a ella?
         </h2>
 
         {/* Subtitle */}
-        <p className="text-[#5E6470] text-sm sm:text-base md:text-lg opacity-90 max-w-xl mb-10 font-normal leading-relaxed relative z-10">
+        <p className="text-[#5E6470] text-sm sm:text-sm md:text-base opacity-90 max-w-xl mb-8 font-normal leading-relaxed relative z-10">
           Conversemos sobre tus procesos actuales y diseñemos una solución a la medida que impulse tu rendimiento y rentabilidad.
         </p>
 

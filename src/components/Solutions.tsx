@@ -98,22 +98,22 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
   }
 
   return (
-    <section id="soluciones" className="py-24 px-6 md:px-12 lg:px-20 max-w-[1536px] mx-auto bg-[#f0f0f0]">
+    <section id="soluciones" className="py-16 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto bg-[#f0f0f0]">
       {/* Header Container */}
-      <div className="max-w-3xl mb-16">
-        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-3 block">
+      <div className="max-w-3xl mb-10">
+        <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-2 block">
           Áreas de Enfoque
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-[rgba(30,50,90,0.95)] mb-6 tracking-tight leading-[1.15]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[rgba(30,50,90,0.95)] mb-4 tracking-tight leading-[1.15]">
           Soluciones que generan ventaja competitiva
         </h2>
-        <p className="text-[#5E6470] text-base md:text-lg leading-relaxed font-normal opacity-90 max-w-2xl">
+        <p className="text-[#5E6470] text-sm md:text-base leading-relaxed font-normal opacity-90 max-w-2xl">
           Cada empresa tiene procesos, objetivos y desafíos distintos. Por eso desarrollamos software completamente personalizado que se integra con la operación real de tu negocio.
         </p>
       </div>
 
       {/* Grid Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {solutions.map((sol, index) => {
           const Icon = sol.icon
           return (
@@ -124,7 +124,7 @@ export function Solutions({ onNavigateToBooking }: SolutionsProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedSolution(sol)}
-              className="bg-white/40 backdrop-blur-md border border-white/30 p-8 rounded-[1.8rem] flex flex-col justify-between hover:border-[#C5A880]/30 hover:bg-white/60 transition-all duration-300 shadow-sm relative group overflow-hidden cursor-pointer"
+              className="bg-white/40 backdrop-blur-md border border-white/30 p-6 md:p-7 rounded-[1.5rem] flex flex-col justify-between hover:border-[#C5A880]/30 hover:bg-white/60 transition-all duration-300 shadow-sm relative group overflow-hidden cursor-pointer"
             >
               {/* Glass subtle gradient element */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

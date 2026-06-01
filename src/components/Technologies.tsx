@@ -14,16 +14,16 @@ export function Technologies() {
   ]
 
   return (
-    <section id="tecnologias" className="py-24 px-6 md:px-12 lg:px-20 max-w-[1536px] mx-auto bg-[#f0f0f0]">
+    <section id="tecnologias" className="py-16 px-6 md:px-12 lg:px-16 max-w-[1536px] mx-auto bg-[#f0f0f0]">
       {/* Container */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         
         {/* Left Side Copy */}
         <div className="lg:col-span-1 max-w-lg">
-          <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-3 block">
+          <span className="text-xs uppercase tracking-[0.2em] text-[#C5A880] font-semibold mb-2 block">
             Infraestructura
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-[rgba(30,50,90,0.95)] mb-6 tracking-tight leading-[1.15]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[rgba(30,50,90,0.95)] mb-4 tracking-tight leading-[1.15]">
             Tecnología orientada a resultados
           </h2>
           <p className="text-[#5E6470] text-sm md:text-base leading-relaxed font-normal opacity-90">
@@ -32,7 +32,7 @@ export function Technologies() {
         </div>
 
         {/* Right Side Tech Grid */}
-        <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+        <div className="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
           {techs.map((tech, index) => {
             const Icon = tech.icon
             return (
@@ -42,7 +42,7 @@ export function Technologies() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="bg-white/40 backdrop-blur-md border border-white/30 p-6 sm:p-8 rounded-[1.8rem] flex flex-col items-center justify-center hover:bg-white/60 hover:border-[#C5A880]/30 transition-all duration-300 shadow-sm group cursor-default"
+                className="bg-white/40 backdrop-blur-md border border-white/30 p-5 sm:p-6 rounded-[1.5rem] flex flex-col items-center justify-center hover:bg-white/60 hover:border-[#C5A880]/30 transition-all duration-300 shadow-sm group cursor-default"
               >
                 {/* Tech Icon Container */}
                 <div className={`p-4 rounded-2xl bg-white/50 border border-white/40 shadow-sm transition-all duration-300 group-hover:scale-110 ${tech.color}`}>
