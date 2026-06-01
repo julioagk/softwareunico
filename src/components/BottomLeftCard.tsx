@@ -11,7 +11,7 @@ export function BottomLeftCard({ onNavigateToBooking }: BottomLeftCardProps) {
       initial={{ x: -20, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className="absolute bottom-28 right-4 left-auto md:left-6 md:right-auto md:bottom-6 lg:bottom-10 lg:left-10 p-2 rounded-full bg-white/30 backdrop-blur-xl flex items-center w-fit shadow-md border border-white/20"
+      className="hidden sm:flex absolute bottom-6 left-6 lg:bottom-10 lg:left-10 p-2 rounded-full bg-white/30 backdrop-blur-xl items-center w-fit shadow-md border border-white/20"
     >
       {/* Action button */}
       <motion.button
@@ -24,7 +24,7 @@ export function BottomLeftCard({ onNavigateToBooking }: BottomLeftCardProps) {
           <ArrowUpRight className="w-4 h-4 text-[rgba(30,50,90,0.9)]" />
         </div>
         <span className="text-[14px] font-normal text-[rgba(30,50,90,0.9)]">
-          Solicitar Diagnóstico
+          Request Consultation
         </span>
       </motion.button>
     </motion.div>

@@ -46,18 +46,18 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal text-[#5E6470] mb-3 tracking-tight leading-[1.08] max-w-3xl"
+              className="text-[22px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal text-[#5E6470] mb-2 sm:mb-3 tracking-tight leading-[1.1] max-w-3xl px-2"
             >
-              Software diseñado para la forma en que opera tu empresa.
+              Software engineered for the way your business scales.
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xs sm:text-xs md:text-sm lg:text-base text-[#5E6470] opacity-80 leading-relaxed max-w-xl font-normal"
+              className="text-[11px] sm:text-xs md:text-sm lg:text-base text-[#5E6470] opacity-80 leading-relaxed max-w-xl font-normal px-4"
             >
-              Creamos plataformas, sistemas internos, automatizaciones e integraciones personalizadas que eliminan procesos manuales y aceleran el crecimiento de tu negocio.
+              We design and build high-performance platforms, integrations, and intelligent systems tailored to your unique operation.
             </motion.p>
 
             {/* Central Call-to-Actions */}
@@ -65,25 +65,27 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center gap-4 mt-6"
+              className="flex flex-row items-center justify-center gap-2.5 sm:gap-4 mt-5 sm:mt-6 w-full px-4"
             >
               <motion.button
                 onClick={onNavigateToBooking}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center bg-[rgba(30,50,90,0.9)] text-white rounded-full px-6 py-3 gap-2 hover:bg-[rgba(30,50,90,1)] transition-colors group shadow-md text-xs sm:text-sm font-semibold"
+                className="flex items-center bg-[rgba(30,50,90,0.9)] text-white rounded-full px-4 sm:px-6 py-2.5 sm:py-3 gap-1.5 sm:gap-2 hover:bg-[rgba(30,50,90,1)] transition-colors group shadow-md text-xs sm:text-sm font-semibold"
               >
-                <span>Agenda una Consultoría</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span className="hidden sm:inline">Schedule a Consultation</span>
+                <span className="sm:hidden">Schedule</span>
+                <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </motion.button>
               
               <motion.button
-                onClick={() => scrollToSection('soluciones')}
+                onClick={() => scrollToSection('solutions')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center bg-white/40 backdrop-blur-md border border-white/30 text-[rgba(30,50,90,0.9)] rounded-full px-6 py-3 hover:bg-white/60 transition-colors text-xs sm:text-sm font-semibold shadow-sm"
+                className="flex items-center bg-white/40 backdrop-blur-md border border-white/30 text-[rgba(30,50,90,0.9)] rounded-full px-4 sm:px-6 py-2.5 sm:py-3 hover:bg-white/60 transition-colors text-xs sm:text-sm font-semibold shadow-sm animate-none"
               >
-                <span>Ver Casos de Uso</span>
+                <span className="hidden sm:inline">View Solutions</span>
+                <span className="sm:hidden">Solutions</span>
               </motion.button>
             </motion.div>
           </div>
