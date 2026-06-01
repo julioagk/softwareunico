@@ -39,14 +39,14 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
           <Navbar onNavigateToBooking={onNavigateToBooking} />
 
           {/* Text Container */}
-          <div className="w-full flex flex-col items-center pt-6 md:pt-14 px-6 text-center max-w-5xl">
+          <div className="w-full flex flex-col items-center pt-2 md:pt-6 lg:pt-8 px-6 text-center max-w-5xl">
             <HeroBadge />
             
             <motion.h1
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-normal text-[#5E6470] mb-4 tracking-tight leading-[1.05] max-w-4xl"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal text-[#5E6470] mb-3 tracking-tight leading-[1.08] max-w-3xl"
             >
               Software diseñado para la forma en que opera tu empresa.
             </motion.h1>
@@ -55,7 +55,7 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xs sm:text-sm md:text-base lg:text-lg text-[#5E6470] opacity-80 leading-relaxed max-w-2xl font-normal"
+              className="text-xs sm:text-xs md:text-sm lg:text-base text-[#5E6470] opacity-80 leading-relaxed max-w-xl font-normal"
             >
               Creamos plataformas, sistemas internos, automatizaciones e integraciones personalizadas que eliminan procesos manuales y aceleran el crecimiento de tu negocio.
             </motion.p>
@@ -65,7 +65,7 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row items-center gap-4 mt-8"
+              className="flex flex-col sm:flex-row items-center gap-4 mt-6"
             >
               <motion.button
                 onClick={onNavigateToBooking}
