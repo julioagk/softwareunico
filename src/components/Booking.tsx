@@ -81,14 +81,14 @@ export function Booking({ onBackToHome }: BookingProps) {
   }
 
   return (
-    <div className="w-full min-h-screen py-16 px-6 md:px-12 flex flex-col justify-start items-center bg-[#f0f0f0] relative overflow-hidden select-none">
+    <div className="w-full min-h-screen py-8 md:py-12 px-6 flex flex-col justify-start items-center bg-[#f0f0f0] relative overflow-hidden select-none">
       
       {/* Background visual accents */}
       <div className="absolute top-20 left-10 w-96 h-96 rounded-full bg-[rgba(30,50,90,0.03)] blur-3xl pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-[#C5A880]/10 blur-3xl pointer-events-none" />
 
       {/* Top Controls Container */}
-      <div className="w-full max-w-[600px] flex justify-start mb-8 relative z-10">
+      <div className="w-full max-w-[500px] flex justify-start mb-4 md:mb-6 relative z-10">
         <motion.button
           onClick={onBackToHome}
           whileHover={{ scale: 1.02, x: -2 }}
@@ -105,7 +105,7 @@ export function Booking({ onBackToHome }: BookingProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="w-full max-w-[600px] bg-white/45 backdrop-blur-xl border border-white rounded-[2.5rem] p-8 sm:p-12 md:p-14 shadow-sm relative z-10 flex flex-col items-center"
+        className="w-full max-w-[500px] bg-white/45 backdrop-blur-xl border border-white rounded-[2rem] p-6 sm:p-8 md:p-10 shadow-sm relative z-10 flex flex-col items-center"
       >
         {/* Subtle corner decorative indicators */}
         <div className="absolute top-6 left-6 w-3 h-3 border-t border-l border-[#C5A880]/30" />
@@ -114,11 +114,11 @@ export function Booking({ onBackToHome }: BookingProps) {
         {submitStatus !== 'success' ? (
           <>
             {/* Header Content */}
-            <div className="text-center w-full mb-10">
+            <div className="text-center w-full mb-6">
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#C5A880] font-semibold mb-2 block">
                 Agendamiento
               </span>
-              <h2 className="text-2xl sm:text-3xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight mb-3">
+              <h2 className="text-2xl font-normal text-[rgba(30,50,90,0.95)] tracking-tight mb-2">
                 Agendar una Reunión
               </h2>
               <p className="text-[#5E6470] text-xs sm:text-sm leading-relaxed max-w-sm mx-auto font-normal opacity-90">
@@ -139,7 +139,7 @@ export function Booking({ onBackToHome }: BookingProps) {
             )}
 
             {/* Form inputs */}
-            <form onSubmit={handleSubmit} className="w-full flex flex-col gap-5">
+            <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
               
               {/* Name Field */}
               <div className="flex flex-col gap-1.5 w-full">
@@ -154,7 +154,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-3 sm:py-3.5 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 
@@ -173,7 +173,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={company}
                   onChange={(e) => setCompany(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-3 sm:py-3.5 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 
@@ -190,7 +190,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-3 sm:py-3.5 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
+                  className="w-full bg-white/40 backdrop-blur-sm border border-white/60 focus:border-[#C5A880] focus:ring-1 focus:ring-[#C5A880] rounded-2xl px-4 py-2.5 sm:py-3 text-sm outline-none text-[rgba(30,50,90,0.9)] transition-all duration-300 shadow-inner disabled:opacity-60"
                 />
               </div>
 
@@ -200,7 +200,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                 disabled={submitStatus === 'loading'}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
-                className="w-full flex items-center justify-center bg-[rgba(30,50,90,0.9)] hover:bg-[rgba(30,50,90,1)] text-white rounded-2xl py-3.5 gap-2 transition-all duration-300 text-sm font-semibold shadow-md disabled:opacity-70 disabled:cursor-not-allowed group"
+                className="w-full flex items-center justify-center bg-[rgba(30,50,90,0.9)] hover:bg-[rgba(30,50,90,1)] text-white rounded-2xl py-3.5 gap-2 transition-all duration-300 text-sm font-semibold shadow-md disabled:opacity-70 disabled:cursor-not-allowed group mt-2"
               >
                 {submitStatus === 'loading' ? (
                   <>
@@ -217,7 +217,7 @@ export function Booking({ onBackToHome }: BookingProps) {
             </form>
 
             {/* Direct WhatsApp shortcut section below */}
-            <div className="w-full mt-10 pt-8 border-t border-white/30 flex flex-col items-center gap-3">
+            <div className="w-full mt-8 pt-6 border-t border-white/30 flex flex-col items-center gap-3">
               <span className="text-xs text-[#5E6470] opacity-80 font-normal">
                 ¿Prefieres conversar directamente por mensajería?
               </span>
@@ -225,7 +225,7 @@ export function Booking({ onBackToHome }: BookingProps) {
                 onClick={handleWhatsAppRedirect}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center gap-2.5 bg-[#25D366] text-white rounded-2xl px-6 py-3 shadow-md hover:bg-[#20ba56] transition-colors duration-300 text-xs sm:text-sm font-semibold group"
+                className="flex items-center gap-2.5 bg-[#25D366] text-white rounded-2xl px-6 py-2.5 shadow-md hover:bg-[#20ba56] transition-colors duration-300 text-xs sm:text-sm font-semibold group"
               >
                 <MessageSquare className="w-4 h-4 text-white" />
                 <span>Chatear por WhatsApp</span>
