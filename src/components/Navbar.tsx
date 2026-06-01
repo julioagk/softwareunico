@@ -7,11 +7,11 @@ interface NavbarProps {
 
 export function Navbar({ onNavigateToBooking }: NavbarProps) {
   const menuItems = [
-    { label: 'Solutions', target: 'solutions', hasDropdown: true },
-    { label: 'Services', target: 'solutions', hasDropdown: true },
-    { label: 'Process', target: 'process', hasDropdown: true },
-    { label: 'Technologies', target: 'technologies', hasDropdown: true },
-    { label: 'Contact', target: 'contact', hasDropdown: true },
+    { label: 'Soluciones', target: 'soluciones', hasDropdown: true },
+    { label: 'Servicios', target: 'soluciones', hasDropdown: true },
+    { label: 'Proceso', target: 'proceso', hasDropdown: true },
+    { label: 'Tecnologías', target: 'tecnologias', hasDropdown: true },
+    { label: 'Contacto', target: 'contacto', hasDropdown: true },
   ]
 
   const scrollToSection = (id: string) => {
@@ -63,8 +63,8 @@ export function Navbar({ onNavigateToBooking }: NavbarProps) {
           <div className="bg-white/20 p-1 rounded-full flex items-center justify-center">
             <ArrowUpRight className="w-3.5 h-3.5 text-white" />
           </div>
-          <span className="text-xs font-semibold hidden sm:inline">Schedule a Consultation</span>
-          <span className="text-xs font-semibold sm:hidden">Schedule</span>
+          <span className="text-xs font-semibold hidden sm:inline">Agenda una Consultoría</span>
+          <span className="text-xs font-semibold sm:hidden">Agendar</span>
         </motion.button>
       </div>
     </nav>

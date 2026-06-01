@@ -11,7 +11,7 @@ export function HeroBadge() {
     >
       <Sparkles className="w-4 h-4 text-[#6233f3]" />
       <span className="text-[14px] font-normal text-[rgba(30,50,90,0.9)]">
-        Bespoke Software
+        Software a Medida
       </span>
     </motion.div>
   )

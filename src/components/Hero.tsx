@@ -48,7 +48,7 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-[22px] sm:text-3xl md:text-4xl lg:text-[48px] xl:text-[54px] font-normal text-[#5E6470] mb-2 sm:mb-3 tracking-tight leading-[1.1] max-w-3xl px-2"
             >
-              Software engineered for the way your business scales.
+              Software diseñado para la forma en que opera tu empresa.
             </motion.h1>
 
             <motion.p
@@ -57,7 +57,7 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-[11px] sm:text-xs md:text-sm lg:text-base text-[#5E6470] opacity-80 leading-relaxed max-w-xl font-normal px-4"
             >
-              We design and build high-performance platforms, integrations, and intelligent systems tailored to your unique operation.
+              Creamos plataformas, sistemas internos, automatizaciones e integraciones personalizadas que eliminan procesos manuales y aceleran el crecimiento de tu negocio.
             </motion.p>
 
             {/* Central Call-to-Actions */}
@@ -73,19 +73,19 @@ export function Hero({ onNavigateToBooking }: HeroProps) {
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center bg-[rgba(30,50,90,0.9)] text-white rounded-full px-4 sm:px-6 py-2.5 sm:py-3 gap-1.5 sm:gap-2 hover:bg-[rgba(30,50,90,1)] transition-colors group shadow-md text-xs sm:text-sm font-semibold"
               >
-                <span className="hidden sm:inline">Schedule a Consultation</span>
-                <span className="sm:hidden">Schedule</span>
+                <span className="hidden sm:inline">Agenda una Consultoría</span>
+                <span className="sm:hidden">Agendar</span>
                 <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </motion.button>
               
               <motion.button
-                onClick={() => scrollToSection('solutions')}
+                onClick={() => scrollToSection('soluciones')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="flex items-center bg-white/40 backdrop-blur-md border border-white/30 text-[rgba(30,50,90,0.9)] rounded-full px-4 sm:px-6 py-2.5 sm:py-3 hover:bg-white/60 transition-colors text-xs sm:text-sm font-semibold shadow-sm animate-none"
               >
-                <span className="hidden sm:inline">View Solutions</span>
-                <span className="sm:hidden">Solutions</span>
+                <span className="hidden sm:inline">Ver Soluciones</span>
+                <span className="sm:hidden">Soluciones</span>
               </motion.button>
             </motion.div>
           </div>
