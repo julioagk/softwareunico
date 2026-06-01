@@ -14,9 +14,7 @@ export function Footer() {
               <span className="text-[#6233f3] font-medium">ÚNICO</span>
             </span>
           </span>
-          <p className="text-[#5E6470] text-xs mt-2 opacity-80 font-normal">
-            Bespoke Software Engineering & AI Studio.
-          </p>
+          {/* Removed Bespoke Software Engineering text per request */}
         </div>
 
         {/* Links */}
