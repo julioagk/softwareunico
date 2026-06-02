@@ -2,10 +2,8 @@ import React, { useState } from 'react'
 import { motion } from 'motion/react'
 import { ArrowLeft, Send, CheckCircle2, MessageSquare, AlertCircle, Loader2 } from 'lucide-react'
 
-// CONFIGURATION: Customize your EmailJS and WhatsApp settings here
-const EMAILJS_SERVICE_ID = 'service_default'
-const EMAILJS_TEMPLATE_ID = 'template_booking'
-const EMAILJS_PUBLIC_KEY = 'user_placeholder' // Replace with your EmailJS Public Key
+// CONFIGURATION: Customize your Formspree Form ID and WhatsApp settings here
+const FORMSPREE_FORM_ID = 'YOUR_FORMSPREE_FORM_ID' // REPLACE with your actual Formspree Form ID (e.g. 'xrgjygkb')
 const WHATSAPP_PHONE_NUMBER = '521234567890' // Replace with your real WhatsApp number (include country code)
 
 interface BookingProps {
@@ -27,49 +25,38 @@ export function Booking({ onBackToHome }: BookingProps) {
     setErrorMessage('')
 
     const payload = {
-      service_id: EMAILJS_SERVICE_ID,
-      template_id: EMAILJS_TEMPLATE_ID,
-      user_id: EMAILJS_PUBLIC_KEY,
-      template_params: {
-        from_name: name,
-        company_name: company || 'No especificada',
-        contact_phone: phone,
-        message: `Solicitud de consultoría para SOFTWARE ÚNICO de ${name} (${company || 'Persona Física'}). Teléfono/WhatsApp: ${phone}`,
-      },
+      name: name,
+      company: company || 'No especificada',
+      phone: phone,
+      message: `Solicitud de consultoría para SOFTWARE ÚNICO de ${name} (${company || 'Persona Física'}). Teléfono/WhatsApp: ${phone}`,
     }
 
     try {
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify(payload),
       })
 
-      if (response.ok || response.status === 200) {
+      if (response.ok) {
         setSubmitStatus('success')
       } else {
-        // Fallback for development if keys are still placeholders
-        if (EMAILJS_PUBLIC_KEY === 'user_placeholder') {
-          setTimeout(() => {
-            setSubmitStatus('success')
-          }, 1500)
-        } else {
-          const errText = await response.text()
-          throw new Error(errText || 'Error al enviar a EmailJS')
-        }
+        const data = await response.json()
+        throw new Error(data.error || 'Error al enviar el formulario a Formspree')
       }
     } catch (err: any) {
       console.error(err)
-      if (EMAILJS_PUBLIC_KEY === 'user_placeholder') {
-        // Safe fallback simulation for UX demonstration
+      if (FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_FORM_ID') {
+        // Safe fallback simulation for UX demonstration in development
         setTimeout(() => {
           setSubmitStatus('success')
         }, 1500)
       } else {
         setSubmitStatus('error')
-        setErrorMessage(err?.message || 'Ocurrió un error inesperado al enviar los datos.')
+        setErrorMessage(err?.message || 'Ocurrió un error inesperado al enviar los datos a Formspree.')
       }
     }
   }
