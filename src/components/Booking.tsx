@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 import { ArrowLeft, Send, CheckCircle2, MessageSquare, AlertCircle, Loader2 } from 'lucide-react'
 
 // CONFIGURATION: Customize your Formspree Form ID and WhatsApp settings here
-const FORMSPREE_FORM_ID = 'YOUR_FORMSPREE_FORM_ID' // REPLACE with your actual Formspree Form ID (e.g. 'xrgjygkb')
+const FORMSPREE_FORM_ID = 'xeedygnv' // REPLACE with your actual Formspree Form ID (e.g. 'xrgjygkb')
 const WHATSAPP_PHONE_NUMBER = '521234567890' // Replace with your real WhatsApp number (include country code)
 
 interface BookingProps {
@@ -49,15 +49,8 @@ export function Booking({ onBackToHome }: BookingProps) {
       }
     } catch (err: any) {
       console.error(err)
-      if (FORMSPREE_FORM_ID === 'YOUR_FORMSPREE_FORM_ID') {
-        // Safe fallback simulation for UX demonstration in development
-        setTimeout(() => {
-          setSubmitStatus('success')
-        }, 1500)
-      } else {
-        setSubmitStatus('error')
-        setErrorMessage(err?.message || 'Ocurrió un error inesperado al enviar los datos a Formspree.')
-      }
+      setSubmitStatus('error')
+      setErrorMessage(err?.message || 'Ocurrió un error inesperado al enviar los datos a Formspree.')
     }
   }
 
