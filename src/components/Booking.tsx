@@ -4,7 +4,7 @@ import { ArrowLeft, Send, CheckCircle2, MessageSquare, AlertCircle, Loader2 } fr
 
 // CONFIGURATION: Customize your Formspree Form ID and WhatsApp settings here
 const FORMSPREE_FORM_ID = 'xeedygnv' // REPLACE with your actual Formspree Form ID (e.g. 'xrgjygkb')
-const WHATSAPP_PHONE_NUMBER = '521234567890' // Replace with your real WhatsApp number (include country code)
+const WHATSAPP_PHONE_NUMBER = '528136458366' // Replace with your real WhatsApp number (include country code)
 
 interface BookingProps {
   onBackToHome: () => void
